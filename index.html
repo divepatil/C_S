@@ -1,241 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roast & Toast</title>
-    <!-- at the top of the page logo -->
-    <link rel="icon" href="logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roast & Toast</title>
+  <link rel="icon" href="logo.png">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        #header-second {
-            width: 60%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+      background-color: #fff;
+      border-bottom: 1px solid #52291c;
+    }
 
+    footer{
+      background-color: #52291c;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+     
 
-        }
+    }
 
-        header {
-            border: 1px solid rgb(72, 43, 43);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: #52291c;
-            margin: 0 10px; /* Spacing between links */
-
-        }
-
-        #first {
-            width: 100%;
-            height: 590px;
-            background-image: url('bg_1.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        #second {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+    header img {
+      max-width: 100%;
+      height: auto;
+      width: 150px; /* Adjust logo size */
+    }
 
 
-        #third {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
+
+    #header-second {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #52291c;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #first {
+      width: 100%;
+      height: auto;
+      background-image: url('bg_1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    #first h1 {
+      font-size: 60px;
+      color: white;
+      letter-spacing: 5px;
+    }
+
+    #second, #sixth {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #second h1,
+    #sixth h1 {
+      font-size: 40px;
+      color: #52291c;
+    }
+
+    #third {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      gap: 30px;
+    }
+
+    #third h1 {
+      color: #52291c;
+      font-size: 22px;
+    }
+
+    #fourth {
+      width: 100%;
+      background-image: url('paper.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #fourth h1 {
+      font-size: 36px;
+      color: #52291c;
+    }
+
+    #fourth > div:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+#fourth > div:nth-child(2) > div h1 {
+  text-align: center;
+}
+
+#fourth > div:nth-child(2) > div p {
+  text-align: justify;
+}
+
+    #pre_1, #pre_2, #pre_3 {
+      width: 280px;
+      border-top-left-radius: 30px;
+      border-bottom-right-radius: 80px;
+      box-shadow: 0 4px 8px #52291c;
+    }
+
+    #fifth {
+      width: 100%;
+      background-image: url('background_div5.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #header-second {
+        justify-content: center;
+      }
+
+      #first h1 {
+        font-size: 36px;
+      }
+
+      #second h1,
+      #sixth h1 {
+        font-size: 28px;
+      }
+
+      #third {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #fourth > div:nth-child(2) {
+        flex-direction: column;
+      }
+      #social-icons {
+        display: flex;
 
 
-        #fourth {
-            width: 100%;
-            height: 700px;
-            background-image: url('paper.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            row-gap: 30px;
-        }
+      }
 
-        #pre_1,
-        #pre_2, 
-        #pre_3 {
-            width: 300px;
-            height: auto;
-            border-top-left-radius: 30px;
-            border-bottom-right-radius: 80px;
-            box-shadow: 0 4px 8px #52291c;
-        }
+      #pre_1, #pre_2, #pre_3 {
+        width: 90%;
+      }
 
-           #fifth{
-            width: 100%;
-            height: 500px;
-            background-image: url('background_div5.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            row-gap: 120px;
-            
-        }
-
-            #sixth{
-           display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; 
-        }
-        
-    </style>
-
+      a {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-
-        <div>
-            <img src="logo.png" alt="Roast & Toast Logo" style="width: 150px; height: auto;">
-        </div>
-
-        <div id="header-second">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Shop</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-            <a href="#"><img src="cart.png" alt="" style="width: 30px;"></a>
-
-
-            <a href="#"><img src="search.png" alt="" style="width: 30px;"></a>
-
-
-            <a href="#"><img src="menu.png" alt="" style="width: 30px;"></a>
-
-
-        </div>
-
-    </header>
-    <div id="first">
-        <div>
-        </div>
-        <div style="display: flex;align-items: center; justify-content: center; flex-direction: column;">
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-slider-img-1.png">
-            <h1 style="font-size: 60px; color: white; letter-spacing: 5px;">Roast & Toast</h1>
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/slider-separator-img.png" alt="">
-        </div>
-
-    </div>
-    <br><br><br><br>
-    <div id="second">
-        <h1 style="font-size: 50px; color: #52291c;" >Our Delicious Offer</h1>
-        <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png">
-        <p style="font-size: 22px;">We offer coffee for all types of your mood!</p>
-    </div>
-    <br><br>
-
-
-    <div id="third">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-5.png" alt="">
-            <h1 style="color: #52291c;">Types of Coffee</h1>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png">
-            <h1 style="color: #52291c;">Bean Varities</h1>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-7.png" alt="">
-            <h1 style="color: #52291c;">Coffee & Pastry</h1>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-8.png" alt="">
-            <h1 style="color: #52291c;">Coffee To Go</h1>
-        </div>
-
-
+  <header>
+    <div>
+      <img src="logo.png" alt="Roast & Toast Logo" class="logo">
     </div>
 
+    <div id="header-second">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#"><img src="cart.png" alt="Cart" style="width: 24px;"></a>
+      <a href="#"><img src="search.png" alt="Search" style="width: 24px;"></a>
+      <a href="#"><img src="menu.png" alt="Menu" style="width: 24px;"></a>
+    </div>
+  </header>
 
-    <div id="fourth">
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <h1 style="font-size: 50px;color: #52291c;">The Coffee Herald</h1>
-            <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/slider-separator-img.png" alt="">
-            <p style="font-size: 22px;">Don't sip the coffee only, sip the emotions</p>
-        </div>
+  <div id="first">
+    <div>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-slider-img-1.png" alt="">
+      <h1>Roast & Toast</h1>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/slider-separator-img.png" alt="">
+    </div>
+  </div>
 
-        <div style="display: flex; align-items: center; justify-content: space-around; column-gap: 40px;">
-            <div>
-                <img src="pre_1.jpg" alt=""
-                    width="300px" id="pre_1">
-                <h1 style="text-align: center; color: #52291c;">Prep Techniques</h1>
-                <p style="width: 300px; text-align: justify;">Measure and grind fresh coffee beans: Use about 2 tablespoons of coffee per 6 ounces of water and grind your beans just before brewing for maximum freshness and flavor.
+  <div id="second">
+    <h1>Our Delicious Offer</h1>
+    <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png" alt="">
+    <p style="font-size: 20px;">We offer coffee for all types of your mood!</p>
+  </div>
 
-</p>
-            </div>
-            <div>
-                <img src="pre_2.jpg" alt=""
-                    width="300px" id="pre_2">
-                <h1 style="text-align: center; color: #52291c;">Prep Techniques</h1>
-                <p style="width: 300px; text-align: justify;">Use fresh, filtered water at the right temperature: Heat water to about 195-205°F (90-96°C), letting boiling water cool for 15-30 seconds before pouring,
-                     to avoid bitterness and extract the best taste</p>
-            </div>
-            <div>
-                <img src="pre_3.jpg" alt=""
-                    width="300px" id="pre_3">
-                <h1 style="text-align: center; color: #52291c;"> Prep Techniques</h1>
-                <p style="width: 300px; text-align: justify;">Brew with care using your preferred method: Whether French press, pour-over, or drip, saturate the grounds evenly, time the extraction (around 3-4 minutes for French press), then enjoy immediately for optimal flavor</p>
-            </div>
+  <div id="third">
+    <div>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-5.png" alt="">
+      <h1>Types of Coffee</h1>
+    </div>
+    <div>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-6.png" alt="">
+      <h1>Bean Varieties</h1>
+    </div>
+    <div>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-7.png" alt="">
+      <h1>Coffee & Pastry</h1>
+    </div>
+    <div>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h2-custom-icon-8.png" alt="">
+      <h1>Coffee To Go</h1>
+    </div>
+  </div>
 
-        </div>
+  <div id="fourth">
+    <div>
+      <h1>The Coffee Herald</h1>
+      <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/slider-separator-img.png" alt="">
+      <p style="font-size: 20px;">Don't sip the coffee only, sip the emotions</p>
     </div>
 
-    <div id="fifth">
-        <div>
-            <img src="">
-        </div>
-
-        <div></div>
+    <div>
+      <div>
+        <img src="pre_1.jpg" id="pre_1" alt="">
+        <h1>Prep Techniques</h1>
+        <p style="width: 300px; text-align: justify;">Measure and grind fresh coffee beans: Use about 2 tablespoons of coffee per 6 ounces of water and grind your beans just before brewing for maximum freshness and flavor.</p>
+      </div>
+      <div>
+        <img src="pre_2.jpg" id="pre_2" alt="">
+        <h1>Prep Techniques</h1>
+        <p style="width: 300px; text-align: justify;">Use fresh, filtered water at the right temperature: Heat water to about 195-205°F (90-96°C), letting boiling water cool for 15-30 seconds before pouring, to avoid bitterness and extract the best taste.</p>
+      </div>
+      <div>
+        <img src="pre_3.jpg" id="pre_3" alt="">
+        <h1>Prep Techniques</h1>
+        <p style="width: 300px; text-align: justify;">Brew with care using your preferred method: Whether French press, pour-over, or drip, saturate the grounds evenly, time the extraction (around 3-4 minutes for French press), then enjoy immediately for optimal flavor.</p>
+      </div>
     </div>
+  </div>
 
+  <div id="fifth">
+    <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h1-single-img-1-250x226.png" alt="">
+  </div>
 
-    <div id="sixth">
-        <h1 style="font-size: 50px; color: #52291c;">Our Sweet Gallery</h1>
-        <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png" alt="">
-        <p style="font-size: 22px; font-family:'Times New Roman', Times, serif;" >
-            Savor every sip at Roast and Toast. Your neighborhood coffee haven since 2025.
-        </p>
+  <div id="sixth">
+    <h1>Our Sweet Gallery</h1>
+    <img src="https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/title-separator.png" alt="">
+    <p style="font-size: 20px;">Savor every sip at Roast and Toast. Your neighborhood coffee haven since 2025.</p>
+  </div>
+<footer>
+  <div>
+    <p style="font-size: 22px; color: white;">Built with ❤ By Omkar_Patil</p>
+  </div>
+
+  <div>
+    <p style="font-size: 18px; color: white;">Follow us on:</p>   
+
+    <div id="social-icons" style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="facebook.png" width="40" alt="Facebook">
+      </a>
+
+      <a href="https://x.com/" target="_blank">
+        <img src="twitter.png" width="40" alt="X">
+      </a>
+
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="instagram.png" width="40" alt="Instagram">
+      </a>
+
+      <a href="https://www.whatsapp.com" target="_blank">
+        <img src="whatsapp.png" width="40" alt="WhatsApp">
+      </a>
     </div>
+  </div>
 
-
+  <p style="margin-top: 20px; font-size: 14px;">&copy; 2025 Roast & Toast. All rights reserved.</p>
+</footer>
 
 
 </body>
-
 </html>
 
